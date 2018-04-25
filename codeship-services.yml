@@ -1,0 +1,7 @@
+app:
+  build:
+    image: test-app
+    dockerfile: Dockerfile
+  volumes:
+    - ./.ssh:/root/.ssh
+  encrypted_env_file: codeship.env.encrypted
