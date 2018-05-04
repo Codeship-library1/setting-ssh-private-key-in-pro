@@ -9,7 +9,7 @@
 
 ### Option A -- Generate a public and private ssh key
 
-- To generate a `codeship_deploy_key` and `codeship_deploy_key.pub` file, modify the following command with your own email address and run in your project directory:
+- To generate a `codeship_deploy_key` and `codeship_deploy_key.pub` file, modify the following command with your own email address and run our [ssh-helper tool](https://github.com/codeship-library/docker-utilities/tree/master/ssh-helper) in your project directory:
 
 ```
 docker run -it --rm -v $(pwd):/keys/ codeship/ssh-helper generate "<YOUR_EMAIL>"
