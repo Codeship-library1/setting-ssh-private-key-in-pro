@@ -51,6 +51,6 @@ docker run -it --rm -v $(pwd):/keys/ codeship/ssh-helper prepare
 ## Run `jet steps`
 
 - Run `jet steps`
-- Steps should pass, demonstrating that `/root/.ssh/id_rsa` is now accessible to the main app via volumes
+- Steps should pass, demonstrating that `id_rsa` is now accessible to the main app via volumes
 - Be sure to modify the volume pathing to `.ssh` in the `codeship-services.yml` if the container user is not `root`
 - Add `.ssh` directory to your `.gitignore` file (!)

@@ -1,7 +1,12 @@
 app:
   build:
-    image: test-app
     dockerfile: Dockerfile
   volumes:
-    - ./.ssh:/root/.ssh
-  encrypted_env_file: codeship.env.encrypted
+    - ./.ssh:/home/non-root-user/.ssh
+
+ssh-helper:
+  image: codeship/ssh-helper
+  volumes:
+    - ./:/keys/
+  encrypted_env_file:
+    - codeship.env.encrypted
